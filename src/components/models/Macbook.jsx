@@ -1,7 +1,7 @@
 
 import { useGLTF, useTexture } from '@react-three/drei'
 
-export function MacbookokModel(props) {
+export default function MacbookokModel(props) {
   const { nodes, materials } = useGLTF('/models/macbook-transformed.glb')
 
   const texture = useTexture('/screen.png');

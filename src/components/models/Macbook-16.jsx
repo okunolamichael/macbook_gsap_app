@@ -1,10 +1,29 @@
 
 import { useGLTF, useTexture } from '@react-three/drei'
+import useMacbookStore from "../../store";
+import { useEffect } from "react";
+import { noChangeParts } from "../../constants";
+import * as THREE from "three";
 
-export function MacbookModel16(props) {
-  const { nodes, materials } = useGLTF("/models/macbook-16-transformed.glb");
+
+export default function MacbookModel16(props) {
+
+    const {color} = useMacbookStore();
+
+  const { nodes, materials, scene } = useGLTF( "/models/macbook-16-transformed.glb");
 
   const texture = useTexture('/screen.png');
+
+    // this is a hack to change the color of the macbook based on the color selected in the store. We are using the useEffect hook to watch for changes in the color and then we are updating the material color of the macbook.
+    useEffect(() => {
+      scene.traverse((child) => {
+        if(child.isMesh) {
+          if(!noChangeParts.includes(child.name)) {
+            child.material.color = new THREE.Color(color);
+          }
+        }
+      })
+    }, [color, scene])
 
   return (
     <group {...props} dispose={null}>
