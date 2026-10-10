@@ -82,7 +82,11 @@ const Performance = () => {
         tl.to(selector, vars, 0);
       });
     },
-    { scope: sectionRef, dependencies: [isDesktop] },
+    {
+      scope: sectionRef,
+      dependencies: [isDesktop],
+      revertOnUpdate: true,
+    },
   );
 
   const positionKey = isMobile ? "mobile" : isIpad ? "ipad" : null;
