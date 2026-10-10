@@ -231,26 +231,26 @@ body {
     }
 
     .wrapper {
-      @apply w-7xl 2xl:w-[100rem] h-[50vh] lg:h-screen relative;
+      @apply w-full max-w-7xl 2xl:max-w-[100rem] h-[50vh] lg:h-screen relative;
 
       img {
-        @apply max-w-40 lg:max-w-[27rem] 2xl:max-w-[35rem] object-cover object-center;
+        @apply max-w-40 max-sm:max-w-28 lg:max-w-[27rem] 2xl:max-w-[35rem] object-cover object-center;
       }
 
       .p1 {
-        @apply absolute bottom-1/2 left-[23%] z-[1] max-sm:left-[33%];
+        @apply absolute bottom-1/2 left-[23%] z-[1];
       }
 
       .p2 {
-        @apply absolute bottom-[40%] right-[17%] z-[3] max-sm:right-[37%];
+        @apply absolute bottom-[40%] right-[17%] z-[3];
       }
 
       .p3 {
-        @apply absolute bottom-1/4 right-[15%] z-[2] max-sm:right-[35%];
+        @apply absolute bottom-1/4 right-[15%] z-[2];
       }
 
       .p4 {
-        @apply absolute bottom-[15%] right-[10%] z-[1] max-sm:right-[30%];
+        @apply absolute bottom-[15%] right-[10%] z-[1];
       }
 
       .p5 {
@@ -258,11 +258,23 @@ body {
       }
 
       .p6 {
-        @apply absolute bottom-1/4 left-1/4 z-[2] max-sm:left-[35%];
+        @apply absolute bottom-1/4 left-1/4 z-[2];
       }
 
       .p7 {
-        @apply absolute bottom-[5%] left-[15%] z-[3] max-sm:left-[35%];
+        @apply absolute bottom-[5%] left-[15%] z-[3];
+      }
+
+      @media (min-width: 641px) and (max-width: 1024px) {
+        @apply h-[60vh];
+
+        img {
+          @apply max-w-36;
+        }
+      }
+
+      @media (max-width: 640px) {
+        @apply h-[50vh];
       }
     }
 

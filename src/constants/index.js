@@ -39,23 +39,27 @@ const performanceImages = [
 const performanceImgPositions = [
   {
     id: "p1",
-    left: 5,
-    bottom: 65,
+    desktop: { left: 5, bottom: 65 },
+    ipad: { left: 8, bottom: 66 },
+    mobile: { left: 15, bottom: 48 },
   },
   {
     id: "p2",
-    right: 10,
-    bottom: 60,
+    desktop: { right: 10, bottom: 60 },
+    ipad: { right: 8, bottom: 66 },
+    mobile: { right: 15, bottom: 48 },
   },
   {
     id: "p3",
-    right: -5,
-    bottom: 45,
+    desktop: { right: -5, bottom: 45 },
+    ipad: { right: 0, bottom: 43 },
+    mobile: { right: 4, bottom: 30 },
   },
   {
     id: "p4",
-    right: -10,
-    bottom: 0,
+    desktop: { right: -10, bottom: 0 },
+    ipad: { right: 5, bottom: 3 },
+    mobile: { right: 5, bottom: 2 },
   },
   {
     id: "p5",
@@ -64,13 +68,15 @@ const performanceImgPositions = [
   },
   {
     id: "p6",
-    left: 2,
-    bottom: 30,
+    desktop: { left: 2, bottom: 30 },
+    ipad: { left: 0, bottom: 36 },
+    mobile: { left: 3, bottom: 30 },
   },
   {
     id: "p7",
-    left: -5,
-    bottom: 0,
+    desktop: { left: -5, bottom: 0 },
+    ipad: { left: 8, bottom: 3 },
+    mobile: { left: 5, bottom: 2 },
   },
 ];
 
